@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Threading;
+using ToastNotificationWindow.ViewModel;
 
 namespace ToastNotificationWindow
 {
@@ -12,6 +13,15 @@ namespace ToastNotificationWindow
         {
             log.Info("Creating NotificationWindow Instance");
             InitializeComponent();
+            NotificationWindowViewModel notificationWindowViewModel = new NotificationWindowViewModel();
+            notificationWindowViewModel.NotificationTitle = "Title Here";
+            notificationWindowViewModel.NotificationMessage = "Message is here";
+            this.DataContext = notificationWindowViewModel;
+
+            //Title notificationTitle = new Title();
+            //notificationTitle.TitleName = "My Title Here";
+            //this.DataContext = notificationTitle;
+
 
             Dispatcher.BeginInvoke(DispatcherPriority.ApplicationIdle, new Action(() =>
             {
@@ -32,6 +42,7 @@ namespace ToastNotificationWindow
                 }
             }));
         }
+
 
         private void DismissButton_Click(object sender, RoutedEventArgs e)
         {

@@ -10,10 +10,24 @@
         <!-- Notification area -->
         <Border BorderThickness="1" Background="Beige" BorderBrush="Black" CornerRadius="10">
             <StackPanel Margin="20">
-                <TextBlock TextWrapping="Wrap" Margin="5">
+                
+                <!--<TextBlock TextWrapping="Wrap" Margin="5">
           <Bold>Notification data</Bold><LineBreak /><LineBreak />
           Something just happened and you are being notified of it.
-                </TextBlock>
+                </TextBlock>-->
+                <!--<TextBlock Name="NotificationTitle" TextWrapping="Wrap" Margin="5">
+                    <Run Text="{Binding Path=StudentName}"/>
+                </TextBlock>-->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="{Binding Path=NotificationTitle}"></TextBlock>
+                    <TextBlock><LineBreak /><LineBreak /></TextBlock>
+                    <TextBlock Text="{Binding Path=NotificationMessage}"></TextBlock>
+
+                </Grid>
+
                 <Button Content="Dismiss" HorizontalAlignment="Center" Click="DismissButton_Click"/>
             </StackPanel>
         </Border>
