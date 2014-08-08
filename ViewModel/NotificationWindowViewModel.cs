@@ -5,6 +5,7 @@ using System.Text;
 using System.Windows.Media;
 
 
+
 namespace ToastNotificationWindow.ViewModel
 {
     public class NotificationWindowViewModel : ObservableViewModel
@@ -45,6 +46,25 @@ namespace ToastNotificationWindow.ViewModel
                 RaisePropertyChangedEvent("NotificationMessage");
             }
         }
+
+        /// <summary>
+        /// Private field for the Notification Title.
+        /// </summary>
+        private Brush _notificationBackground;
+
+        /// <summary>
+        /// Property for the Notification Title.
+        /// </summary>
+        public Brush NotificationBackground
+        {
+            get { return _notificationBackground; }
+            set
+            {
+                _notificationBackground = value;
+                RaisePropertyChangedEvent("NotificationBackground");
+            }
+        }
+ 
  
     }
 }

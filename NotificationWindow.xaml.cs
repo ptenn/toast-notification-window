@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Media;
 using System.Windows.Threading;
 using ToastNotificationWindow.ViewModel;
 
@@ -16,6 +17,8 @@ namespace ToastNotificationWindow
             NotificationWindowViewModel notificationWindowViewModel = new NotificationWindowViewModel();
             notificationWindowViewModel.NotificationTitle = "Title Here";
             notificationWindowViewModel.NotificationMessage = "Message is here";
+            Background = new SolidColorBrush(Colors.Red);
+
             this.DataContext = notificationWindowViewModel;
 
             //Title notificationTitle = new Title();
