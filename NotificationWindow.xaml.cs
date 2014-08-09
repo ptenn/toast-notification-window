@@ -18,12 +18,8 @@ namespace ToastNotificationWindow
             notificationWindowViewModel.NotificationTitle = "Title Here";
             notificationWindowViewModel.NotificationMessage = "Message is here";
             Background = new SolidColorBrush(Colors.Red);
-
+            //Foreground = new SolidColorBrush(Colors.Blue);
             this.DataContext = notificationWindowViewModel;
-
-            //Title notificationTitle = new Title();
-            //notificationTitle.TitleName = "My Title Here";
-            //this.DataContext = notificationTitle;
 
 
             Dispatcher.BeginInvoke(DispatcherPriority.ApplicationIdle, new Action(() =>

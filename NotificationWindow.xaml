@@ -22,9 +22,9 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Text="{Binding Path=NotificationTitle}"></TextBlock>
+                    <TextBlock Text="{Binding Path=NotificationTitle}" Foreground="{Binding Path=NotificationTextColor}"></TextBlock>
                     <TextBlock><LineBreak /><LineBreak /></TextBlock>
-                    <TextBlock Text="{Binding Path=NotificationMessage}"></TextBlock>
+                    <TextBlock Text="{Binding Path=NotificationMessage}" Foreground="{Binding Path=NotificationTextColor}"></TextBlock>
 
                 </Grid>
 

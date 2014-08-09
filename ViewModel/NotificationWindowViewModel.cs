@@ -64,6 +64,24 @@ namespace ToastNotificationWindow.ViewModel
                 RaisePropertyChangedEvent("NotificationBackground");
             }
         }
+
+        ///// <summary>
+        ///// Private field for the Notification Title.
+        ///// </summary>
+        //private Brush _notificationTextColor;
+
+        ///// <summary>
+        ///// Property for the Notification Title.
+        ///// </summary>
+        //public Brush NotificationTextColor
+        //{
+        //    get { return _notificationTextColor; }
+        //    set
+        //    {
+        //        _notificationTextColor = value;
+        //        RaisePropertyChangedEvent("NotificationTextColor");
+        //    }
+        //}
  
  
     }
