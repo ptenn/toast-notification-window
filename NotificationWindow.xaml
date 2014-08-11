@@ -10,22 +10,21 @@
         <!-- Notification area -->
         <Border BorderThickness="1" Background="{Binding Path=NotificationBackground}" BorderBrush="Black" CornerRadius="10">
             <StackPanel Margin="20">
-                
-                <!--<TextBlock TextWrapping="Wrap" Margin="5">
-          <Bold>Notification data</Bold><LineBreak /><LineBreak />
-          Something just happened and you are being notified of it.
-                </TextBlock>-->
-                <!--<TextBlock Name="NotificationTitle" TextWrapping="Wrap" Margin="5">
-                    <Run Text="{Binding Path=StudentName}"/>
-                </TextBlock>-->
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"></RowDefinition>
-                    </Grid.RowDefinitions>
-                    <TextBlock Text="{Binding Path=NotificationTitle}" Foreground="{Binding Path=NotificationTextColor}"></TextBlock>
-                    <TextBlock><LineBreak /><LineBreak /></TextBlock>
-                    <TextBlock Text="{Binding Path=NotificationMessage}" Foreground="{Binding Path=NotificationTextColor}"></TextBlock>
 
+                <Grid Background="#F0F0F0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" Margin="5">
+                        <TextBlock Text="{Binding Path=NotificationTitle}" Foreground="{Binding Path=NotificationTextColor}"></TextBlock>
+                    </StackPanel>
+
+                    <!-- Grid(1) -->
+                    <StackPanel Grid.Row="1" Margin="5">
+                        <TextBlock Text="{Binding Path=NotificationMessage}" Foreground="{Binding Path=NotificationTextColor}"></TextBlock>
+                    </StackPanel>
                 </Grid>
 
                 <Button Content="Dismiss" HorizontalAlignment="Center" Click="DismissButton_Click"/>

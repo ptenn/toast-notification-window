@@ -47,7 +47,7 @@ namespace ToastNotificationWindow.ViewModel
             }
         }
 
-        /// <summary>
+        /// <summary>aw
         /// Private field for the Notification Title.
         /// </summary>
         private Brush _notificationBackground;
