@@ -11,7 +11,7 @@
         <Border BorderThickness="1" Background="{Binding Path=NotificationBackground}" BorderBrush="Black" CornerRadius="10">
             <StackPanel Margin="20">
 
-                <Grid Background="#F0F0F0">
+                <Grid Background="{Binding Path=NotificationBackground}">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*" />
                         <RowDefinition Height="2*"/>
