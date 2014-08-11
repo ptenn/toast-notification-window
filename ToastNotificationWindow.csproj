@@ -56,6 +56,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="SolidColorBrush2.cs" />
     <Compile Include="ViewModel\NotificationWindowViewModel.cs" />
     <Compile Include="ViewModel\ObservableViewModel.cs" />
     <Page Include="MainWindow.xaml">

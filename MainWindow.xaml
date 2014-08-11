@@ -13,6 +13,6 @@
             <RowDefinition Height="10*"></RowDefinition>
         </Grid.RowDefinitions>
         <Button Grid.Row="1" Grid.Column="0" Content="Show Info" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100" Click="ShowInfoButton_Click"/>
-        <Button Grid.Row="1" Grid.Column="1" Content="Show Error" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100"/>
+        <Button Grid.Row="1" Grid.Column="1" Content="Show Error" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100" Click="ShowErrorButton_Click"/>
     </Grid>
 </Window>

@@ -8,13 +8,13 @@
     <Grid RenderTransformOrigin="0,1" >
 
         <!-- Notification area -->
-        <Border BorderThickness="1" Background="{Binding Path=NotificationBackground}" BorderBrush="Black" CornerRadius="10">
+        <Border BorderThickness="0" Background="Transparent" BorderBrush="Black" CornerRadius="10">
             <StackPanel Margin="20">
 
                 <Grid Background="{Binding Path=NotificationBackground}">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*" />
-                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="3*"/>
                     </Grid.RowDefinitions>
 
                     <StackPanel Grid.Row="0" Margin="5">
@@ -23,7 +23,11 @@
 
                     <!-- Grid(1) -->
                     <StackPanel Grid.Row="1" Margin="5">
-                        <TextBlock Text="{Binding Path=NotificationMessage}" Foreground="{Binding Path=NotificationTextColor}"></TextBlock>
+                        <TextBlock Text="{Binding Path=NotificationMessage}">
+                            <!--<TextBlock.Foreground>
+                                <SolidColorBrush Color="{Binding NotificationTextColor}"/>
+                            </TextBlock.Foreground>-->
+                        </TextBlock>
                     </StackPanel>
                 </Grid>
 
