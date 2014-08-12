@@ -18,8 +18,8 @@ namespace ToastNotificationWindow
             notificationWindowViewModel.NotificationTitle = "Title Here";
             notificationWindowViewModel.NotificationMessage = "Message is here";
             Background = new SolidColorBrush();
-            Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#CEC7FF"));
-            Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#06009c"));
+            Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FF6666"));
+            Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#800000"));
             this.DataContext = notificationWindowViewModel;
 
 
@@ -44,7 +44,6 @@ namespace ToastNotificationWindow
             }));
         }
 
-
         private void DismissButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -54,6 +53,16 @@ namespace ToastNotificationWindow
         {
             this.Close();
         }
+
+        protected override void OnLocationChanged(EventArgs e)
+        {
+            NotificationWindow.HorizontalOffset += 1;
+            NotificationWindow.HorizontalOffset -= 1;
+            base.OnLocationChanged(e);
+        }
+
+        public static int HorizontalOffset { get; set; }
     }
+
 
 }

@@ -11,6 +11,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ToastNotificationWindow.ViewModel;
+using System.Windows.Controls.Primitives;
 
 namespace ToastNotificationWindow
 {
@@ -38,9 +40,12 @@ namespace ToastNotificationWindow
         private void ShowErrorButton_Click(object sender, RoutedEventArgs e)
         {
             log.Info("ShowErrorButton Clicked");
-            NotificationWindow toastNotificationWindowError = new NotificationWindow();
-            toastNotificationWindowError.Owner = this;
-            toastNotificationWindowError.Show();
+            NotificationWindow toastNotificationWindow = new NotificationWindow();
+            toastNotificationWindow.Owner = this;
+            toastNotificationWindow.Show();
         }
+
+
+
     }
 }
