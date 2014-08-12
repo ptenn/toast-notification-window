@@ -19,9 +19,9 @@ namespace ToastNotificationWindow
             notificationWindowViewModel.NotificationMessage = "Message is here";
             Background = new SolidColorBrush();
             Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#CEC7FF"));
-            //Foreground = new SolidColorBrush();
-            //Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#06009c"));
+            Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#06009c"));
             this.DataContext = notificationWindowViewModel;
+
 
 
             Dispatcher.BeginInvoke(DispatcherPriority.ApplicationIdle, new Action(() =>

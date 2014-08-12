@@ -18,7 +18,8 @@
                     </Grid.RowDefinitions>
 
                     <StackPanel Grid.Row="0" Margin="5">
-                        <TextBlock Text="{Binding Path=NotificationTitle}" Foreground="{Binding Path=NotificationTextColor}"></TextBlock>
+                        <TextBlock Text="{Binding Path=NotificationTitle}"></TextBlock>
+                        <!--<TextBlock Text="{Binding Path=NotificationTitle}" Foreground="{Binding Path=NotificationTextColor}"></TextBlock>-->
                     </StackPanel>
 
                     <!-- Grid(1) -->

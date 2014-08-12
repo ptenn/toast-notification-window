@@ -38,9 +38,9 @@ namespace ToastNotificationWindow
         private void ShowErrorButton_Click(object sender, RoutedEventArgs e)
         {
             log.Info("ShowErrorButton Clicked");
-            NotificationWindow toastNotificationWindow = new NotificationWindow();
-            toastNotificationWindow.Owner = this;
-            toastNotificationWindow.Show();
+            NotificationWindow toastNotificationWindowError = new NotificationWindow();
+            toastNotificationWindowError.Owner = this;
+            toastNotificationWindowError.Show();
         }
     }
 }
