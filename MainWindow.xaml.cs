@@ -48,8 +48,16 @@ namespace ToastNotificationWindow
         private void ShowErrorButton_Click(object sender, RoutedEventArgs e)
         {
             log.Info("ShowErrorButton Clicked");
+
+            NotificationWindowViewModel errorViewModel = new NotificationWindowViewModel();
+            errorViewModel.NotificationTitle = "Error Notification";
+            errorViewModel.NotificationMessage = "VizEngine Notification Error Alert Text";
+            errorViewModel.SetBackgroundColorFromHex("#E9ADAD");
+            errorViewModel.SetTextColorFromHex("#990000");
+
             NotificationWindow toastNotificationWindow = new NotificationWindow();
             toastNotificationWindow.Owner = this;
+            toastNotificationWindow.DataContext = errorViewModel;
             toastNotificationWindow.Show();
         }
 
