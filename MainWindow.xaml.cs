@@ -32,8 +32,16 @@ namespace ToastNotificationWindow
         private void ShowInfoButton_Click(object sender, RoutedEventArgs e)
         {
             log.Info("ShowInfoButton Clicked");
+
+            NotificationWindowViewModel infoViewModel = new NotificationWindowViewModel();
+            infoViewModel.NotificationTitle = "Informational Notification";
+            infoViewModel.NotificationMessage = "VizEngine Notification message Text";
+            infoViewModel.SetBackgroundColorFromHex("#F5F5DC"); 
+            infoViewModel.SetTextColorFromHex("#000000");
+
             NotificationWindow toastNotificationWindow = new NotificationWindow();
             toastNotificationWindow.Owner = this;
+            toastNotificationWindow.DataContext = infoViewModel;
             toastNotificationWindow.Show();
         }
 

@@ -47,42 +47,58 @@ namespace ToastNotificationWindow.ViewModel
             }
         }
 
-        /// <summary>aw
-        /// Private field for the Notification Title.
+        /// <summary>
+        /// Private field for the Notification Background.
         /// </summary>
-        private Brush _notificationBackground;
+        private Brush _backgroundColor;
 
         /// <summary>
-        /// Property for the Notification Title.
+        /// Property for the Notification Background.
         /// </summary>
-        public Brush NotificationBackground
+        public Brush BackgroundColor
         {
-            get { return _notificationBackground; }
+            get { return _backgroundColor; }
             set
             {
-                _notificationBackground = value;
-                RaisePropertyChangedEvent("NotificationBackground");
+                _backgroundColor = value;
+                RaisePropertyChangedEvent("BackgroundColor");
             }
+        }
+
+        /// <summary>
+        /// Convenience method to set the Background Color from a Hex Color code.
+        /// </summary>
+        /// <param name="hexColor">The Hex Color for Background</param>
+        public void SetBackgroundColorFromHex(String hexColor)
+        {
+            BackgroundColor = (SolidColorBrush)(new BrushConverter().ConvertFrom(hexColor));
         }
 
         /// <summary>
         /// Private field for the Notification Title.
         /// </summary>
-        private Brush _notificationTextColor;
+        private Brush _textColor;
 
         /// <summary>
         /// Property for the Notification Title.
         /// </summary>
-        public Brush NotificationTextColor
+        public Brush TextColor
         {
-            get { return _notificationTextColor; }
+            get { return _textColor; }
             set
             {
-                _notificationTextColor = value;
-                RaisePropertyChangedEvent("NotificationTextColor");
+                _textColor = value;
+                RaisePropertyChangedEvent("TextColor");
             }
         }
- 
- 
+
+        /// <summary>
+        /// Convenience method to set the Text Color from a Hex Color code.
+        /// </summary>
+        /// <param name="hexColor">The Hex Color for Text</param>
+        public void SetTextColorFromHex(String hexColor)
+        {
+            TextColor = (SolidColorBrush)(new BrushConverter().ConvertFrom(hexColor));
+        } 
     }
 }

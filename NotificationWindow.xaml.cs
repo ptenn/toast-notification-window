@@ -14,15 +14,6 @@ namespace ToastNotificationWindow
         {
             log.Info("Creating NotificationWindow Instance");
             InitializeComponent();
-            NotificationWindowViewModel notificationWindowViewModel = new NotificationWindowViewModel();
-            notificationWindowViewModel.NotificationTitle = "Title Here";
-            notificationWindowViewModel.NotificationMessage = "Message is here";
-            Background = new SolidColorBrush();
-            Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FF6666"));
-            Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#800000"));
-            this.DataContext = notificationWindowViewModel;
-
-
 
             Dispatcher.BeginInvoke(DispatcherPriority.ApplicationIdle, new Action(() =>
             {

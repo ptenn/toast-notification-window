@@ -8,26 +8,22 @@
     <Grid RenderTransformOrigin="0,1" >
 
         <!-- Notification area -->
-        <Border BorderThickness="0" Background="Transparent" BorderBrush="Black" CornerRadius="10">
+        <Border BorderThickness="1" Background="{Binding Path=BackgroundColor}" BorderBrush="Black" CornerRadius="10">
             <StackPanel Margin="20">
 
-                <Grid Background="{Binding Path=NotificationBackground}">
+                <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*" />
                         <RowDefinition Height="3*"/>
                     </Grid.RowDefinitions>
 
                     <StackPanel Grid.Row="0" Margin="5">
-                        <TextBlock Text="{Binding Path=NotificationTitle}"></TextBlock>
-                        <!--<TextBlock Text="{Binding Path=NotificationTitle}" Foreground="{Binding Path=NotificationTextColor}"></TextBlock>-->
+                        <TextBlock FontWeight="Bold" Text="{Binding Path=NotificationTitle}" Foreground="{Binding Path=TextColor}"></TextBlock>
                     </StackPanel>
 
                     <!-- Grid(1) -->
                     <StackPanel Grid.Row="1" Margin="5">
-                        <TextBlock Text="{Binding Path=NotificationMessage}">
-                            <!--<TextBlock.Foreground>
-                                <SolidColorBrush Color="{Binding NotificationTextColor}"/>
-                            </TextBlock.Foreground>-->
+                        <TextBlock Text="{Binding Path=NotificationMessage}" Foreground="{Binding Path=TextColor}">
                         </TextBlock>
                     </StackPanel>
                 </Grid>
